@@ -1,0 +1,10 @@
+th{
+    background-color: yellow;
+    font-style: oblique;
+}
+td{
+    background-color: aquamarine;
+}
+th.nivel{
+    background-color:darkolivegreen;
+}

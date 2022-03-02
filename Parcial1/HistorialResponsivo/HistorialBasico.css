@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 14px/1.4 Arial;
+}
+
+#contenedor {
+	margin: 50px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+th {
+	background: rgb(255, 255, 0);
+	font-weight: bold;
+    font-style: oblique;
+}
+td.nivel{
+    background-color: rgb(230, 255, 188);
+    font-weight: bold;
+}
+td, th {
+	padding: 6px;
+	border: 1px solid rgb(0, 0, 0);
+	text-align: left;
+}
