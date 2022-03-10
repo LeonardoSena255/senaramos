@@ -93,6 +93,11 @@ input:checked ~ .content {
     height: auto;
   }
 
+  input:checked + .sidebar{
+    width:0px;
+    height: 0px; 
+  }
+
   .sidebar a {float: left;}
 
   div.content {margin-left: 0;}
