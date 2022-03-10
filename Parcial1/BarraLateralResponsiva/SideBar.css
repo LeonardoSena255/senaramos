@@ -1,0 +1,106 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  font: Arial;
+  color: black;
+  font-size: 20px;
+  margin: 10px;
+}
+
+h1{
+  font: Verdana;
+  font-weight: bold;
+  justify-content: center;
+}
+
+label{
+  font-weight: bold;
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+ul{
+  font: Arial;
+  font-size: 20px;
+  margin: 10px;
+  margin-left: 50px;
+}
+
+div.sidebar {
+  position: fixed;
+  background-color:rgb(19, 19, 104);
+  width: 200px;
+  height: 100%;
+  overflow: auto;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  padding: 5px;
+  color: white;
+  border-radius: 10px;
+  font-style: oblique;
+}
+
+a:hover {
+  background-color: rgb(116, 126, 255);
+  color: white;
+}
+
+div.content {
+  background-color: rgb(163, 163, 255);
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1500px;
+}
+
+.contenidoOpcion { 
+  display: none;
+  background-color: white; 
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 5px 10px;
+}
+
+#opcion1:target,
+#opcion2:target,
+#opcion3:target,
+#opcion4:target,
+#opcion5:target { display: block;}
+
+
+input {display: none;}
+
+input:checked + .sidebar{
+  width:0px;
+}
+
+input:checked ~ .content {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  div.sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .sidebar a {float: left;}
+
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar a {
+    float: none;
+    text-align: center;
+  }
+}

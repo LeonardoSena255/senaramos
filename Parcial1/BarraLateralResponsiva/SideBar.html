@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SideBar</title>
+    <link rel="stylesheet" href="SideBar.css">
+    <script src="https://kit.fontawesome.com/c814b77e52.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div class="sidebar">
+        <a id="opc1" href="#opcion1"><i class="fa-solid fa-equals"></i>Algebra</a>
+        <a id="opc2" href="#opcion2"><i class="fa-solid fa-infinity"></i>Calculo Diferencial</a>
+        <a id="opc3" href="#opcion3"><i class="fa-solid fa-divide"></i>Calculo Integral</a>
+        <a id="opc4" href="#opcion4"><i class="fa-solid fa-greater-than-equal"></i>Calculo Vectorial</a>
+        <a id="opc5" href="#opcion5"><i class="fa-solid fa-square-root-variable"></i>Ecuaciones Diferenciales</a>
+    </div>
+    <div class="content">
+        <label for="toggle"><i class="fa-solid fa-bars"></i> Menu</label>
+        <div id="opcion1" class="contenidoOpcion">
+            <h1>Álgebra</h1>
+            <p>El álgebra es una rama de las matemáticas que utiliza no solo números y signos, sino también letras para resolver operaciones.</p>
+            <p>Visto de otro modo, el álgebra busca hallar el valor numérico de variables denominadas incógnitas. Estas se representan mediante letras del alfabeto como x o y.</p>
+            <p>Mediante el álgebra se resuelven distintos tipos de operaciones como sumas, restas, multiplicaciones, divisiones, y otras más complejas como los logaritmos. Así, en un sentido más amplio, se puede entender el álgebra como el análisis de relaciones, cantidades y estructuras.</p>
+            <p>Se puede definir además al álgebra como una extensión de la aritmética a un campo más extenso, donde no es necesario conocer el valor de todas las variables para efectuar operaciones matemáticas.</p>
+            <h2>Origen del álgebra</h2>
+            <p>La palabra álgebra tiene como origen el vocablo árabe al-ŷabar , que se traduce como restauración o reintegración. Esto explica por qué se conocía antiguamente al álgebra al arte de reducir los huesos que estaban rotos o dislocados. </p>
+            <p>El término al-ŷabar proviene de la obra titulada «Compendio de cálculo por reintegración y comparación». Esta fue escrita alrededor del año 820 AC por matemático y astrónomo persa Muhammad ibn Musa al-Jwarizmi (conocido como Al Juarismi), considerado uno de los padres del álgebra. Sin embargo, los orígenes del álgebra estarían en Babilonia, incluso más de 500 años antes de Cristo.</p>
+        </div>
+        <div id="opcion2" class="contenidoOpcion">
+            <h1>Calculo Diferencial</h1>
+            <p>El cálculo diferencial es una rama de la matemática que permite resolver diversos problemas donde el cambio de las variables se puede modelar en un continuo numérico para determinar, a partir de ello, la variación de estos elementos en un instante o intervalo específico.</p>
+            <p>Al aplicarlo, es posible determinar el momento en que se da una tendencia al alza o a la baja del mercado a partir de los datos del índice bursátil, determinar la velocidad máxima que un vehículo puede alcanzar en una carretera, el comportamiento que puede mostrar a largo plazo la concentración de una mezcla o predecir el número de horas-hombre necesarias para un nivel de producción industrial; los anteriores son ejemplos de la amplia variedad de problemas que pueden resolverse gracias a esta disciplina.</p>
+        </div>
+        <div id="opcion3" class="contenidoOpcion">
+            <h1>Calculo Integral</h1>
+            <h2>¿Quíen fue el creador del calculo integral?</h2>
+            <p>Isaac Newton comparte con Leibniz el crédito por el desarrollo del cálculo integral y diferencial. Leibniz fue el primero en publicar un trabajo sobre cálculo, pero quien primero lo desarrollo fue Newton durante los años 1664 a 1666.Newton abordó el desarrollo del cálculo a partir de: La geometría analítica.Creo el Método de Fluxiones el cual son unas reglas para calcular máximos, mínimos y las tangentes (el cual no fue publicado),desarrollando un enfoque geométrico y analítico de derivadas matemáticas las cuales fueron aplicadas en curvas definidas a través de ecuaciones.</p>
+            <h2>Concepto de Integral</h2>
+            <p>El cálculo integral, es una rama de las matemáticas que se encarga del estudio de las integrales y las anti derivadas se emplea mas para cálculos áreas y volúmenes.Fue usado principalmente por, Aristóteles, Descartes, newton y Barrow con las aportaciones de newton creo el teorema de cálculo integral que dice: que la integración y la derivación son procesos inversos.</p>
+            <p>Proceso que permite restituir una función que ha sido previamente derivada. Es decir, la operación opuesta de la derivada así como la suma es a la resta.
+                Por conveniencia se introduce  una notación para la anti-derivada de una función</p>
+        </div>
+        <div id="opcion4" class="contenidoOpcion">
+            <h1>Calculo Vectorial</h1>
+            <p>El cálculo vectorial, análisis vectorial o cálculo multivariable es un campo de las matemáticas referidas al análisis real multivariable de vectores en 2 o más dimensiones. Es un enfoque de la geometría diferencial como conjunto de fórmulas y técnicas para solucionar problemas muy útiles para la ingeniería y la física. </p>
+            <p>Consideramos los campos vectoriales, que asocian un vector a cada punto en el espacio, y campos escalares, que asocian un escalar a cada punto en el espacio. Por ejemplo, la temperatura de una piscina es un campo escalar: a cada punto asociamos un valor escalar de temperatura. El flujo del agua en la misma piscina es un campo vectorial: a cada punto asociamos un vector de velocidad. </p>
+            <p>Cuatro operaciones son importantes en el cálculo vectorial: </p>
+            <ul>
+                <li>Gradiente: mide la tasa y la dirección del cambio en un campo escalar; el gradiente de un campo escalar es un campo vectorial.</li>
+                <li>Rotor o rotacional: mide la tendencia de un campo vectorial a rotar alrededor de un punto; el rotor de un campo vectorial es otro campo vectorial.</li>
+                <li>Divergencia: mide la tendencia de un campo vectorial a originarse o converger hacia ciertos puntos; la divergencia de un campo vectorial es un campo escalar.</li>
+                <li>Laplaciano: relaciona el "promedio" de una propiedad en un punto del espacio con otra magnitud, es un operador diferencial de segundo orden.</li>
+            </ul>
+        </div>
+        <div id="opcion5" class="contenidoOpcion">
+            <h1>Ecuaciones Diferenciales</h1>
+            <p>Una ecuación diferencial es una ecuación matemática que relaciona una función con sus derivadas. En las matemáticas aplicadas, las funciones usualmente representan cantidades físicas, las derivadas representan sus razones de cambio y la ecuación define la relación entre ellas. Como estas relaciones son muy comunes, las ecuaciones diferenciales juegan un rol primordial en diversas disciplinas, incluyendo la ingeniería, la física, la química, la economía y la biología. </p>
+            <p>En las aplicaciones de las matemáticas, a menudo surgen problemas en los que se desconoce la dependencia de un parámetro con respecto a otro, pero es posible escribir una expresión para la tasa de cambio de un parámetro en relación con otro (derivada). En este caso, el problema se reduce a encontrar una función por su derivada relacionada con algunas otras expresiones. </p>
+            <p>En las matemáticas puras, las ecuaciones diferenciales se estudian desde perspectivas diferentes, la mayoría concernientes al conjunto de las soluciones de las funciones que satisfacen la ecuación. Solo las ecuaciones diferenciales más simples se pueden resolver mediante fórmulas explícitas; sin embargo, se pueden determinar algunas propiedades de las soluciones de una cierta ecuación diferencial sin hallar su forma exacta. </p>
+            <p>Si la solución exacta no puede hallarse, esta puede obtenerse numéricamente, mediante una aproximación usando computadoras. La teoría de sistemas dinámicos hace énfasis en el análisis cualitativo de los sistemas descritos por ecuaciones diferenciales, mientras que muchos métodos numéricos han sido desarrollados para determinar soluciones con cierto grado de exactitud. </p>
+        </div>
+    </div>
+</body>
+</html>
