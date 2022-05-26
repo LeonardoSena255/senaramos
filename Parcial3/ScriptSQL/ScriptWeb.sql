@@ -2,7 +2,7 @@ CREATE DATABASE L19100255;
 use L19100255;
 
 CREATE TABLE futbolista (
-idJugador int IDENTITY(1,1) PRIMARY KEY,
+idJugador int AUTO_INCREMENT PRIMARY KEY,
 nomJugador varchar(30),
 nomEquipo varchar(30),
 division varchar(15),
