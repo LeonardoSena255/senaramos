@@ -8,27 +8,28 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="EjercicioFinal.css">
-    <script src="EjercicioFinal.js"></script>
+    <script src="./js/EjercicioFinal.js"></script>
     <title>Document</title>
 </head>
-<body>
+<body onload = "Clean()">
         <div class="container">
             <form class="form">
               <div class="row">
-                  <div class="form-group col-sm-12 col-md-4 col-lg-12">
+                  <div class="form-group col-sm-12 col-md-4 col-lg-2">
                         <label for="idJugador" class="control-label">ID Jugador</label>
-                        <input id="idJugador" type="text" class="form-control" placeholder="ID"/>
+                        <input id="idJugador" type="text" class="form-control" placeholder="ID" disabled/>
                   </div>
-                  <div class="form-group col-sm-12 col-md-8 col-lg-12">
+                  <div class="form-group col-sm-12 col-md-8 col-lg-10">
                         <label for="nomJugador">Nombre</label>
                         <input id="nomJugador" type="text" class="form-control" placeholder="Nombre Completo"/>
                   </div>
-                  <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group col-sm-12 col-md-12 col-lg-8">
                     <label for="nomEquipo">Nombre del Equipo:</label>
                     <input id="nomEquipo" type="text" class="form-control" placeholder="Nombre del Equipo"/>
                   </div>
-                  <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                  <div class="form-group col-sm-12 col-md-12 col-lg-4">
                     <label for="division">Division</label>
                     <input id="division" type="text" class="form-control" placeholder="Division"/>
                   </div>
@@ -41,7 +42,7 @@
                   </div>
                   <div class="form-group col-sm-12 col-md-4 col-lg-6">
                         <label for="fechaNac">Fecha de Nacimiento</label>
-                        <input id="fechaNac" type="text" class="form-control" placeholder="Fecha de Nacimiento"/>
+                        <input id="fechaNac" type="text" class="form-control" placeholder="AA-MM-DD"/>
                   </div>
               </div>
         
@@ -56,17 +57,18 @@
                           <input id="peso" type="text" class="form-control" placeholder="Peso"/>
                     </div>
                     <div class="form-group col-sm-12 col-md-12 col-lg-4">
-                          <label for="altura">Pais</label>
+                          <label for="altura">Altura</label>
                           <input id="altura" type="text" class="form-control" placeholder="Altura"/>
                     </div>
+                    
                 <div class="form-group col-lg-12 col-md- col-sm-12">
                 <label class="mr-sm-2" for="inlineFormCustomSelect">Posicion:</label>
-                <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                  <option selected>Posicion...</option>
-                  <option value="1">Delantero</option>
-                  <option value="2">Defensa</option>
-                  <option value="3">Mediocampista</option>
-                  <option value="4">Portero</option>
+                <select class="custom-select mr-sm-2" id="posicion">
+                  <option selected value="selected">Posicion...</option>
+                  <option value="Delantero">Delantero</option>
+                  <option value="Defensa">Defensa</option>
+                  <option value="Mediocampista">Mediocampista</option>
+                  <option value="Portero">Portero</option>
                 </select>
               </div>
               </div>
@@ -76,35 +78,25 @@
               <label>Pierna habil:</label>
               <div class="form-check">
                 
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <input class="form-check-input" type="radio" name="exampleRadios" id="derecho" value="Derecho" checked>
                 <label class="form-check-label" for="exampleRadios1">
                   Derecho
                 </label>
               </div>
               <div class="form-check">
-                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="zurdo" value="Zurdo">
                 <label class="form-check-label" for="exampleRadios2">
                   Zurdo
                 </label>
               </div>
-        
-        
-              <button id="btn1" type="button" class="btn btn-primary">Boton 1</button>
-              <button id="btn2" type="button" class="btn btn-primary">Boton 2</button>
-              <button id="btn3" type="button" class="btn btn-primary">Boton 3</button>
-              <button id="btn4" type="button" class="btn btn-primary">Boton 4</button>
-              <button id="btnjson" type="button" class="btn btn-primary" title="Obtener json">JSON</button>
-              <button id="btnfetch" type="button" class="btn btn-primary" title="Obtener fetch">Boton Fetch</button>
+      
               <button id="btnConsultaBD" type="button" class="btn btn-primary" title="ObtenerConsulta">Consulta</button>
-              <div id="ejemplo"></div>
-    </form>
-    <div id="alerta1" class="alert alert-warning alert-dismissible collapse" role="alert">
-        <strong>Alerta!</strong> Esta es una alerta de prueba.
-        <button id="btnCloseAlert"type="button" class="close" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+              <button id="btnAgregarBD" type="button" class="btn btn-primary" title="AgregarJugador" >Agregar</button>
+              <button id="btnBorrarBD" type="button" class="btn btn-primary" title="BorrarJugador" disabled>Borrar</button>
+              <button id="btnModificarBD" type="button" class="btn btn-primary" title="ModificarJugador" disabled>Modificar</button>
 
+              
+    </form>
 
       <div id="modal1" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -125,24 +117,21 @@
           </div>
         </div>
       </div>
-      
+
       <script>
-          $(document).ready(function(){
-              $('#btn1').click(function(){
-                  $('#alerta1').show();
-              });
-
-              $('#btnCloseAlert').click(function(){
-                  $('#alerta1').hide();
-              });
-
-              
-
-              $('#btn3').click(function(){
-                  $('#modal1').modal();
-              });
-              
-          })
+        function Clean() {
+          $('#idJugador').val("");
+            $('#nomJugador').val("");
+            $('#nomEquipo').val("");
+            $('#division').val("");
+            $('#paisOrigen').val("");
+            $('#fechaNac').val("");
+            $('#edad').val("");
+            $('#altura').val("");
+            $('#peso').val("");
+            $('#posicion').val("selected");
+            document.getElementById('derecho').checked = true;
+        }
       </script>
       
 </body>
